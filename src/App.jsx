@@ -1,7 +1,7 @@
 import "./App.css";
 import { RouterProvider } from "react-router-dom";
 
-import { AuthProviderWrapper } from "./context/Auth.context";
+import { AuthProviderWrapper } from "./context/AuthContext";
 import { ThemeProviderWrapper } from "./context/ThemeContext";
 import router from "./routes/AppRoutes";
 
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <AuthProviderWrapper>
         <ThemeProviderWrapper>
-            <RouterProvider router={router} />
+          <RouterProvider router={router} />
         </ThemeProviderWrapper>
       </AuthProviderWrapper>
     </div>

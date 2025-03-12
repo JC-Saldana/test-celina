@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { AuthContext } from "../../context/Auth.context";
+import { AuthContext } from "../../context/AuthContext";
 import { Navigate } from "react-router-dom";
 import Loading from "../common/Loading/Loading";
 
@@ -15,7 +15,7 @@ function IsPrivate({ children, adminOnly }) {
     // If the user is not logged in navigate to the login page ❌
     return <Navigate to="/login" />;
   }
-  
+
   if (adminOnly && user?.role !== "admin") {
     return <Navigate to="/home" />
   }

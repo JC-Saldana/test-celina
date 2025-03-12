@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import { AuthContext } from "../../context/Auth.context";
+import { AuthContext } from "../../context/AuthContext";
 import gameService from "../../services/game.service";
 import userService from "../../services/user.service";
 
@@ -190,7 +190,7 @@ function GameDetailPage() {
             <Avatar sx={{ backgroundColor: "pink" }}>
               <GitHubIcon />
             </Avatar>
-            <Link href={game.creatorGithub} sx={{ pl: 1}}>{game.creator}'s Github Profile</Link>
+            <Link href={game.creatorGithub} sx={{ pl: 1 }}>{game.creator}'s Github Profile</Link>
           </Box>
         </Box>
 
